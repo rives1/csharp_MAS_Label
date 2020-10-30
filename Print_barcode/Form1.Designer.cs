@@ -34,9 +34,7 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.edtDes = new System.Windows.Forms.TextBox();
 			this.edtCod = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.lvMain = new System.Windows.Forms.ListView();
@@ -51,6 +49,7 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.PNL = new System.Windows.Forms.Panel();
+			this.lblDES3 = new System.Windows.Forms.Label();
 			this.lblDES2 = new System.Windows.Forms.Label();
 			this.BCODELBL = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +57,6 @@
 			this.lblDES1 = new System.Windows.Forms.Label();
 			this.lblART = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
-			this.lblDES3 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
 			this.splitContainer2.Panel1.SuspendLayout();
 			this.splitContainer2.Panel2.SuspendLayout();
@@ -113,9 +111,7 @@
 			// 
 			// splitContainer2.Panel1
 			// 
-			this.splitContainer2.Panel1.Controls.Add(this.edtDes);
 			this.splitContainer2.Panel1.Controls.Add(this.edtCod);
-			this.splitContainer2.Panel1.Controls.Add(this.label3);
 			this.splitContainer2.Panel1.Controls.Add(this.label1);
 			// 
 			// splitContainer2.Panel2
@@ -125,43 +121,28 @@
 			this.splitContainer2.SplitterDistance = 42;
 			this.splitContainer2.TabIndex = 17;
 			// 
-			// edtDes
-			// 
-			this.edtDes.Location = new System.Drawing.Point(383, 15);
-			this.edtDes.Name = "edtDes";
-			this.edtDes.Size = new System.Drawing.Size(195, 20);
-			this.edtDes.TabIndex = 1;
-			// 
 			// edtCod
 			// 
 			this.edtCod.Location = new System.Drawing.Point(135, 15);
 			this.edtCod.Name = "edtCod";
-			this.edtCod.Size = new System.Drawing.Size(122, 20);
+			this.edtCod.Size = new System.Drawing.Size(290, 20);
 			this.edtCod.TabIndex = 1;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(290, 18);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(87, 13);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "Filtro Descrizione";
+			this.edtCod.TextChanged += new System.EventHandler(this.edtCod_TextChanged);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(64, 19);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(65, 13);
+			this.label1.Size = new System.Drawing.Size(69, 13);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Filtro Codice";
+			this.label1.Text = "Filtro Ricerca";
 			// 
 			// splitContainer1
 			// 
 			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
 			this.splitContainer1.Name = "splitContainer1";
 			// 
 			// splitContainer1.Panel1
@@ -194,7 +175,7 @@
 			this.lvMain.FullRowSelect = true;
 			this.lvMain.HideSelection = false;
 			this.lvMain.Location = new System.Drawing.Point(0, 0);
-			this.lvMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.lvMain.Margin = new System.Windows.Forms.Padding(2);
 			this.lvMain.Name = "lvMain";
 			this.lvMain.Size = new System.Drawing.Size(765, 434);
 			this.lvMain.Sorting = System.Windows.Forms.SortOrder.Ascending;
@@ -236,7 +217,7 @@
 			// numPos
 			// 
 			this.numPos.Location = new System.Drawing.Point(170, 294);
-			this.numPos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.numPos.Margin = new System.Windows.Forms.Padding(2);
 			this.numPos.Maximum = new decimal(new int[] {
             300,
             0,
@@ -255,7 +236,7 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Location = new System.Drawing.Point(20, 286);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(105, 54);
 			this.pictureBox1.TabIndex = 17;
@@ -264,7 +245,7 @@
 			// button3
 			// 
 			this.button3.Location = new System.Drawing.Point(281, 347);
-			this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button3.Margin = new System.Windows.Forms.Padding(2);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(70, 48);
 			this.button3.TabIndex = 16;
@@ -274,7 +255,7 @@
 			// button2
 			// 
 			this.button2.Location = new System.Drawing.Point(20, 347);
-			this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button2.Margin = new System.Windows.Forms.Padding(2);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(94, 48);
 			this.button2.TabIndex = 15;
@@ -293,10 +274,22 @@
 			this.PNL.Controls.Add(this.lblDES1);
 			this.PNL.Controls.Add(this.lblART);
 			this.PNL.Location = new System.Drawing.Point(20, 22);
-			this.PNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.PNL.Margin = new System.Windows.Forms.Padding(2);
 			this.PNL.Name = "PNL";
 			this.PNL.Size = new System.Drawing.Size(346, 250);
 			this.PNL.TabIndex = 14;
+			// 
+			// lblDES3
+			// 
+			this.lblDES3.AccessibleDescription = "";
+			this.lblDES3.AutoSize = true;
+			this.lblDES3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDES3.Location = new System.Drawing.Point(27, 203);
+			this.lblDES3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblDES3.Name = "lblDES3";
+			this.lblDES3.Size = new System.Drawing.Size(56, 22);
+			this.lblDES3.TabIndex = 9;
+			this.lblDES3.Text = "Text2";
 			// 
 			// lblDES2
 			// 
@@ -335,7 +328,7 @@
 			// BCODE
 			// 
 			this.BCODE.Location = new System.Drawing.Point(130, 2);
-			this.BCODE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BCODE.Margin = new System.Windows.Forms.Padding(2);
 			this.BCODE.Name = "BCODE";
 			this.BCODE.Size = new System.Drawing.Size(201, 95);
 			this.BCODE.TabIndex = 5;
@@ -366,24 +359,12 @@
 			// button1
 			// 
 			this.button1.Location = new System.Drawing.Point(150, 368);
-			this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button1.Margin = new System.Windows.Forms.Padding(2);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 27);
 			this.button1.TabIndex = 13;
 			this.button1.Text = "Reload XLS";
 			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// lblDES3
-			// 
-			this.lblDES3.AccessibleDescription = "";
-			this.lblDES3.AutoSize = true;
-			this.lblDES3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDES3.Location = new System.Drawing.Point(27, 203);
-			this.lblDES3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.lblDES3.Name = "lblDES3";
-			this.lblDES3.Size = new System.Drawing.Size(56, 22);
-			this.lblDES3.TabIndex = 9;
-			this.lblDES3.Text = "Text2";
 			// 
 			// Form1
 			// 
@@ -392,7 +373,7 @@
 			this.ClientSize = new System.Drawing.Size(1169, 502);
 			this.Controls.Add(this.splitContainer2);
 			this.Controls.Add(this.statusStrip1);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Form1";
 			this.Text = "MAS Label Printer";
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -440,9 +421,7 @@
 		private System.Windows.Forms.Label lblDES1;
 		private System.Windows.Forms.Label lblART;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox edtDes;
 		private System.Windows.Forms.TextBox edtCod;
-		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ColumnHeader columnHeader6;
 		private System.Windows.Forms.NumericUpDown numPos;

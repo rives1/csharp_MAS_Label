@@ -19,6 +19,7 @@ namespace Print_barcode
 
   public partial class Form1 : Form
   {
+    
     public Form1()
     {
     InitializeComponent();
@@ -28,8 +29,9 @@ namespace Print_barcode
     HSSFSheet sh;
     //generazione immagine barcode
     Bitmap bmp;
+    //lista con i dati
+    List<ListViewItem> allItems = new List<ListViewItem>();
 
-    
     void _genBarcode(string _pText)
     {
       if (_pText!="")
@@ -135,6 +137,83 @@ namespace Print_barcode
               //carico la listview
               ListViewItem _lvItem;
               _lvItem = lvMain.Items.Add(sh.GetRow(row).GetCell(0).ToString());
+              
+              for (int I = 1; I<=5; I++)  //ciclo sulle celle rimanenti xls da caricare
+              {
+                if (sh.GetRow(row).GetCell(I) == null)
+                  _lvItem.SubItems.Add("");
+                else
+                  _lvItem.SubItems.Add(sh.GetRow(row).GetCell(I).ToString());
+              }
+              //string value = sh.GetRow(row).GetCell(0).ToString(); //Here for sample , I just save the value in "value" field, Here you can write your custom logics...  
+              //MessageBox.Show(value);
+            }
+          }
+        }
+        lvMain.Items[0].Selected = true;
+
+        allItems.Clear();
+        allItems.AddRange(lvMain.Items.Cast<ListViewItem>());
+
+//        lvFull.Items.AddRange(lvMain.Items); //copio i dati nella lview di backup su cui effettuare le ricerche
+      }
+      else
+        MessageBox.Show("File etichette non trovato");
+    }
+
+    void _filterList()
+		{
+      /*clono la lista dei dati
+       * la filtro
+       * sostituisco la lista iniziale
+       
+      lvMain.Items.Clear();
+      foreach(ListViewItem itm in lvFull.Items)
+      {
+        if (itm.Text.Contains(edtCod.Text))
+          lvMain.Items.Add(itm);
+			}
+      */
+      lvMain.Items.Clear();   // clear all items we have atm
+      if (edtCod.Text == "")
+      {
+        lvMain.Items.AddRange(allItems.ToArray());  // no filter: add all items
+        return;
+      }
+      // now we find all items that have a suitable text in any subitem/field/column
+      var list = allItems.Cast<ListViewItem>()
+                         .Where(x => x.SubItems
+                                      .Cast<ListViewItem.ListViewSubItem>()
+                                      .Any(y => y.Text.Contains(edtCod.Text)))
+                         .ToArray();
+      lvMain.Items.AddRange(list);  // now we add the result
+
+
+    }
+
+
+    /*
+     * versione originale con carico del file id excel direttamente nella listview
+     * 
+         void _readXLS ()
+    {
+      if (File.Exists("CodiciABarre.xls"))
+      {
+        //ripulisco la itemlistbox
+        lvMain.Items.Clear();
+        //inizio lettura file excel
+        using (var fs = new FileStream("CodiciABarre.xls", FileMode.Open, FileAccess.Read))
+        {
+          wb = new HSSFWorkbook(fs);
+          sh = (HSSFSheet)wb.GetSheet("Etichette");
+
+          for (int row = 0; row <= sh.LastRowNum; row++) //Loop the records upto filled row  
+          {
+            if (sh.GetRow(row) != null) //null is when the row only contains empty cells   
+            {
+              //carico la listview
+              ListViewItem _lvItem;
+              _lvItem = lvMain.Items.Add(sh.GetRow(row).GetCell(0).ToString());
               for (int I = 1; I<=5; I++)
               {
                 if (sh.GetRow(row).GetCell(I) == null)
@@ -151,8 +230,8 @@ namespace Print_barcode
       }
       else
         MessageBox.Show("File etichette non trovato");
-    }
-    
+    }*/
+
     private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
     {
       bmp = new Bitmap(PNL.Width, PNL.Height);
@@ -212,5 +291,10 @@ namespace Print_barcode
       BCODE.Left = Convert.ToInt32(numPos.Value);
 
     }
+
+		private void edtCod_TextChanged(object sender, EventArgs e)
+		{
+      _filterList();
+		}
 	}
 }
