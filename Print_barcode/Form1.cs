@@ -187,7 +187,7 @@ namespace Print_barcode
                                       .Any(y => y.Text.Contains(edtCod.Text)))
                          .ToArray();
       lvMain.Items.AddRange(list);  // now we add the result
-
+      
 
     }
 
@@ -266,18 +266,12 @@ namespace Print_barcode
     private void lvMain_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
     {
       //al cambio dell'indice di selezione aggiorno i controlli dell'etichetta
-      if (e.IsSelected)
-      //if (lvMain.SelectedIndices.Count > 0)
+      //if (e.IsSelected)
+      if (lvMain.SelectedIndices.Count > 0)
       {
-       // if (lvMain.SelectedItems[0].SubItems[1].Text != "")
-          lblART.Text = lvMain.SelectedItems[0].SubItems[1].Text;
-
-       // if (lvMain.SelectedItems[0].SubItems[2].Text != "")
-          lblDES1.Text = lvMain.SelectedItems[0].SubItems[2].Text;
-
-       // if (lvMain.SelectedItems[0].SubItems[3].Text != "")
-          lblDES2.Text = lvMain.SelectedItems[0].SubItems[3].Text;
-
+        lblART.Text = lvMain.SelectedItems[0].SubItems[1].Text;
+        lblDES1.Text = lvMain.SelectedItems[0].SubItems[2].Text;
+        lblDES2.Text = lvMain.SelectedItems[0].SubItems[3].Text;
         lblDES3.Text = lvMain.SelectedItems[0].SubItems[4].Text;
 
         if (lvMain.SelectedItems[0].SubItems[5].Text != "")
