@@ -143,7 +143,7 @@ namespace Print_barcode
                 if (sh.GetRow(row).GetCell(I) == null)
                   _lvItem.SubItems.Add("");
                 else
-                  _lvItem.SubItems.Add(sh.GetRow(row).GetCell(I).ToString());
+                  _lvItem.SubItems.Add(sh.GetRow(row).GetCell(I).ToString().ToUpper());
               }
               //string value = sh.GetRow(row).GetCell(0).ToString(); //Here for sample , I just save the value in "value" field, Here you can write your custom logics...  
               //MessageBox.Show(value);
@@ -184,7 +184,7 @@ namespace Print_barcode
       var list = allItems.Cast<ListViewItem>()
                          .Where(x => x.SubItems
                                       .Cast<ListViewItem.ListViewSubItem>()
-                                      .Any(y => y.Text.Contains(edtCod.Text)))
+                                      .Any(y => y.Text.Contains(edtCod.Text.ToUpper())))
                          .ToArray();
       lvMain.Items.AddRange(list);  // now we add the result
       
