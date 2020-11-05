@@ -95,10 +95,10 @@
 			// statusStrip1
 			// 
 			this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			this.statusStrip1.Location = new System.Drawing.Point(0, 480);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 750);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-			this.statusStrip1.Size = new System.Drawing.Size(1169, 22);
+			this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 15, 0);
+			this.statusStrip1.Size = new System.Drawing.Size(1754, 22);
 			this.statusStrip1.TabIndex = 15;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -106,6 +106,7 @@
 			// 
 			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.splitContainer2.Name = "splitContainer2";
 			this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
 			// 
@@ -117,24 +118,27 @@
 			// splitContainer2.Panel2
 			// 
 			this.splitContainer2.Panel2.Controls.Add(this.splitContainer1);
-			this.splitContainer2.Size = new System.Drawing.Size(1169, 480);
-			this.splitContainer2.SplitterDistance = 42;
+			this.splitContainer2.Size = new System.Drawing.Size(1754, 750);
+			this.splitContainer2.SplitterDistance = 65;
+			this.splitContainer2.SplitterWidth = 6;
 			this.splitContainer2.TabIndex = 17;
 			// 
 			// edtCod
 			// 
-			this.edtCod.Location = new System.Drawing.Point(135, 15);
+			this.edtCod.Location = new System.Drawing.Point(202, 23);
+			this.edtCod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.edtCod.Name = "edtCod";
-			this.edtCod.Size = new System.Drawing.Size(290, 20);
+			this.edtCod.Size = new System.Drawing.Size(433, 26);
 			this.edtCod.TabIndex = 1;
 			this.edtCod.TextChanged += new System.EventHandler(this.edtCod_TextChanged);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(64, 19);
+			this.label1.Location = new System.Drawing.Point(96, 29);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(69, 13);
+			this.label1.Size = new System.Drawing.Size(102, 20);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Filtro Ricerca";
 			// 
@@ -142,7 +146,6 @@
 			// 
 			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
 			this.splitContainer1.Name = "splitContainer1";
 			// 
 			// splitContainer1.Panel1
@@ -157,9 +160,8 @@
 			this.splitContainer1.Panel2.Controls.Add(this.button2);
 			this.splitContainer1.Panel2.Controls.Add(this.PNL);
 			this.splitContainer1.Panel2.Controls.Add(this.button1);
-			this.splitContainer1.Size = new System.Drawing.Size(1169, 434);
-			this.splitContainer1.SplitterDistance = 765;
-			this.splitContainer1.SplitterWidth = 3;
+			this.splitContainer1.Size = new System.Drawing.Size(1754, 679);
+			this.splitContainer1.SplitterDistance = 1147;
 			this.splitContainer1.TabIndex = 17;
 			// 
 			// lvMain
@@ -175,9 +177,8 @@
 			this.lvMain.FullRowSelect = true;
 			this.lvMain.HideSelection = false;
 			this.lvMain.Location = new System.Drawing.Point(0, 0);
-			this.lvMain.Margin = new System.Windows.Forms.Padding(2);
 			this.lvMain.Name = "lvMain";
-			this.lvMain.Size = new System.Drawing.Size(765, 434);
+			this.lvMain.Size = new System.Drawing.Size(1147, 679);
 			this.lvMain.Sorting = System.Windows.Forms.SortOrder.Ascending;
 			this.lvMain.TabIndex = 10;
 			this.lvMain.UseCompatibleStateImageBehavior = false;
@@ -216,15 +217,14 @@
 			// 
 			// numPos
 			// 
-			this.numPos.Location = new System.Drawing.Point(170, 294);
-			this.numPos.Margin = new System.Windows.Forms.Padding(2);
+			this.numPos.Location = new System.Drawing.Point(255, 452);
 			this.numPos.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
 			this.numPos.Name = "numPos";
-			this.numPos.Size = new System.Drawing.Size(80, 20);
+			this.numPos.Size = new System.Drawing.Size(120, 26);
 			this.numPos.TabIndex = 18;
 			this.numPos.Value = new decimal(new int[] {
             120,
@@ -235,33 +235,32 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(20, 286);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+			this.pictureBox1.Location = new System.Drawing.Point(30, 440);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(105, 54);
+			this.pictureBox1.Size = new System.Drawing.Size(158, 83);
 			this.pictureBox1.TabIndex = 17;
 			this.pictureBox1.TabStop = false;
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(281, 347);
-			this.button3.Margin = new System.Windows.Forms.Padding(2);
+			this.button3.Location = new System.Drawing.Point(422, 534);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(70, 48);
+			this.button3.Size = new System.Drawing.Size(105, 74);
 			this.button3.TabIndex = 16;
 			this.button3.Text = "Print";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(20, 347);
-			this.button2.Margin = new System.Windows.Forms.Padding(2);
+			this.button2.Location = new System.Drawing.Point(30, 534);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(94, 48);
+			this.button2.Size = new System.Drawing.Size(141, 74);
 			this.button2.TabIndex = 15;
 			this.button2.Text = "Preview";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Visible = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// PNL
 			// 
@@ -273,10 +272,9 @@
 			this.PNL.Controls.Add(this.BCODE);
 			this.PNL.Controls.Add(this.lblDES1);
 			this.PNL.Controls.Add(this.lblART);
-			this.PNL.Location = new System.Drawing.Point(20, 22);
-			this.PNL.Margin = new System.Windows.Forms.Padding(2);
+			this.PNL.Location = new System.Drawing.Point(30, 34);
 			this.PNL.Name = "PNL";
-			this.PNL.Size = new System.Drawing.Size(346, 250);
+			this.PNL.Size = new System.Drawing.Size(519, 385);
 			this.PNL.TabIndex = 14;
 			// 
 			// lblDES3
@@ -284,10 +282,9 @@
 			this.lblDES3.AccessibleDescription = "";
 			this.lblDES3.AutoSize = true;
 			this.lblDES3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDES3.Location = new System.Drawing.Point(27, 203);
-			this.lblDES3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblDES3.Location = new System.Drawing.Point(40, 312);
 			this.lblDES3.Name = "lblDES3";
-			this.lblDES3.Size = new System.Drawing.Size(56, 22);
+			this.lblDES3.Size = new System.Drawing.Size(84, 33);
 			this.lblDES3.TabIndex = 9;
 			this.lblDES3.Text = "Text2";
 			// 
@@ -296,10 +293,9 @@
 			this.lblDES2.AccessibleDescription = "";
 			this.lblDES2.AutoSize = true;
 			this.lblDES2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDES2.Location = new System.Drawing.Point(27, 181);
-			this.lblDES2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblDES2.Location = new System.Drawing.Point(40, 278);
 			this.lblDES2.Name = "lblDES2";
-			this.lblDES2.Size = new System.Drawing.Size(56, 22);
+			this.lblDES2.Size = new System.Drawing.Size(84, 33);
 			this.lblDES2.TabIndex = 8;
 			this.lblDES2.Text = "Text2";
 			// 
@@ -307,10 +303,9 @@
 			// 
 			this.BCODELBL.AutoSize = true;
 			this.BCODELBL.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BCODELBL.Location = new System.Drawing.Point(142, 102);
-			this.BCODELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.BCODELBL.Location = new System.Drawing.Point(213, 157);
 			this.BCODELBL.Name = "BCODELBL";
-			this.BCODELBL.Size = new System.Drawing.Size(117, 27);
+			this.BCODELBL.Size = new System.Drawing.Size(170, 41);
 			this.BCODELBL.TabIndex = 7;
 			this.BCODELBL.Text = "bcode_lbl";
 			// 
@@ -318,19 +313,17 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(26, 130);
-			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label2.Location = new System.Drawing.Point(39, 200);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(62, 27);
+			this.label2.Size = new System.Drawing.Size(93, 41);
 			this.label2.TabIndex = 6;
 			this.label2.Text = "ART:";
 			// 
 			// BCODE
 			// 
-			this.BCODE.Location = new System.Drawing.Point(130, 2);
-			this.BCODE.Margin = new System.Windows.Forms.Padding(2);
+			this.BCODE.Location = new System.Drawing.Point(195, 3);
 			this.BCODE.Name = "BCODE";
-			this.BCODE.Size = new System.Drawing.Size(201, 95);
+			this.BCODE.Size = new System.Drawing.Size(302, 146);
 			this.BCODE.TabIndex = 5;
 			this.BCODE.TabStop = false;
 			// 
@@ -338,10 +331,9 @@
 			// 
 			this.lblDES1.AutoSize = true;
 			this.lblDES1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDES1.Location = new System.Drawing.Point(27, 159);
-			this.lblDES1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblDES1.Location = new System.Drawing.Point(40, 245);
 			this.lblDES1.Name = "lblDES1";
-			this.lblDES1.Size = new System.Drawing.Size(56, 22);
+			this.lblDES1.Size = new System.Drawing.Size(84, 33);
 			this.lblDES1.TabIndex = 4;
 			this.lblDES1.Text = "Text1";
 			// 
@@ -349,31 +341,29 @@
 			// 
 			this.lblART.AutoSize = true;
 			this.lblART.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblART.Location = new System.Drawing.Point(84, 130);
-			this.lblART.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblART.Location = new System.Drawing.Point(126, 200);
 			this.lblART.Name = "lblART";
-			this.lblART.Size = new System.Drawing.Size(67, 27);
+			this.lblART.Size = new System.Drawing.Size(101, 41);
 			this.lblART.TabIndex = 3;
 			this.lblART.Text = "Text0";
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(150, 368);
-			this.button1.Margin = new System.Windows.Forms.Padding(2);
+			this.button1.Location = new System.Drawing.Point(225, 566);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(100, 27);
+			this.button1.Size = new System.Drawing.Size(150, 42);
 			this.button1.TabIndex = 13;
 			this.button1.Text = "Reload XLS";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// Form1
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1169, 502);
+			this.ClientSize = new System.Drawing.Size(1754, 772);
 			this.Controls.Add(this.splitContainer2);
 			this.Controls.Add(this.statusStrip1);
-			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Form1";
 			this.Text = "MAS Label Printer";
 			this.Load += new System.EventHandler(this.Form1_Load);

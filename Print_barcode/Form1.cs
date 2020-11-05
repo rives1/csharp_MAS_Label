@@ -247,22 +247,6 @@ namespace Print_barcode
             
     }
     
-    private void button1_Click_1(object sender, EventArgs e)
-    {
-      _readXLS();
-    }
-
-    private void button2_Click_1(object sender, EventArgs e)
-    {
-      printPreviewDialog1.ShowDialog();
-    }
-
-    private void button3_Click_1(object sender, EventArgs e)
-    {
-      if (_selectPrinter())
-        printDocument1.Print();
-    }
-
     private void lvMain_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
     {
       //al cambio dell'indice di selezione aggiorno i controlli dell'etichetta
@@ -290,5 +274,21 @@ namespace Print_barcode
 		{
       _filterList();
 		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+      if (_selectPrinter())
+        printDocument1.Print();
+    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+      _readXLS();
+    }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+      printPreviewDialog1.ShowDialog();
+    }
 	}
 }
