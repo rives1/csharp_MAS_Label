@@ -235,6 +235,7 @@ namespace Print_barcode
     private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
     {
       bmp = new Bitmap(PNL.Width, PNL.Height);
+      bmp.SetResolution(Convert.ToSingle(numResDPI.Value), Convert.ToSingle(numResDPI.Value));
       PNL.DrawToBitmap(bmp, new Rectangle(0, 0, PNL.Width, PNL.Height));
       e.Graphics.DrawImage(bmp, 0, 0);
     }
